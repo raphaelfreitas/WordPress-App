@@ -37,8 +37,17 @@
             
             <div class="menu"></div>
 
-            <div class="construcao">Aplicativo em construção!</div>
-            
+            <div class="form">
+                <input type="text" class="inputFunction" name="function" /><br>
+                <input type="button" name="buscar" class="inputBuscar" value="Buscar" />
+            </div>    
+
+
+
+        <br><br>
+            <iframe src="#" width="90%" height="200px" frameborder="0" style="display:none;">
+              <p>Your browser does not support iframes.</p>
+            </iframe> 
             
 
         </div>
@@ -61,6 +70,17 @@
                 $menu.show().animate({'left':'0px'},500);
 
             }
+
+       });
+
+
+       $(document).on('click', '.inputBuscar', function (e) {
+
+        var val = $('.inputFunction').val();
+        $('iframe').attr('src','http://codex.wordpress.org/Function_Reference/'+val).show();
+
+
+
 
        });
 
